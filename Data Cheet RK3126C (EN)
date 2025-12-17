@@ -17,7 +17,7 @@ Pages 20–21 – Complete processor pinout
 Pages 22–27 – Detailed pin function descriptions
 
 ⚠️ Important note
-Pin numbering usually starts at the bottom-left corner of the processor marking and continues clockwise.
+Pin numbering usually starts at the bottom-left corner of the processor marking and continues counter-clockwise.
 👉 VERIFY ON PAGE 18, as orientation may vary depending on board layout.
 
 📍 Critical Pins (UART / Power)
