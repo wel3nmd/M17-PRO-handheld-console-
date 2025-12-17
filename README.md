@@ -3,13 +3,13 @@ M17 Deep Mod Project
 
 Projeto experimental e educacional focado em estudar profundamente o console portátil M17 (SJGAM), utilizando a placa W12-V02, explorando seus limites de hardware, software e modificações físicas.
 
-Este projeto não é comercial, não possui releases e tem como objetivo aprendizado, pesquisa e documentação técnica inédita sobre o M17.
+Este projeto não é comercial, não possui releases e tem como objetivo aprendizado, pesquisa, reverse engineering e documentação técnica inédita sobre o M17.
 
 📌 Sobre o M17 (modelo base)
 
-O M17 é um console portátil retrô de baixo custo, amplamente vendido no mercado chinês, com foco em emulação.
+O M17 é um console portátil retrô de baixo custo, amplamente vendido no mercado chinês, com foco em emulação via Linux.
 
-Características conhecidas:
+Características conhecidas
 
 CPU ARM Quad-core Cortex-A7 (~1.2 GHz, Rockchip RK3126 / variantes)
 
@@ -21,43 +21,51 @@ Controles analógicos simples (sujeitos a drift)
 
 Armazenamento principal via cartão microSD
 
-Memória interna mínima para boot/fallback (OEM)
+Cartão fornecido de fábrica possui baixa durabilidade (falhas recorrentes em poucos meses)
 
-Sem Wi-Fi ou Bluetooth nativos
+Memória interna mínima para boot / fallback OEM
 
-Refrigeração passiva ou inexistente
+Sem Wi-Fi ou Bluetooth nativos (hardware capado para multiplayer ou recursos online)
+
+Refrigeração passiva ou inexistente, resultando em aquecimento elevado durante uso prolongado
 
 🎯 Objetivos do Projeto
 
 Estudar o processo de boot do RK3126
 
-Entender o funcionamento da memória interna OEM vs SD
+Entender o funcionamento da memória interna OEM vs armazenamento em SD
 
-Analisar e modificar o Linux/EmuELEC
+Analisar e modificar o Linux / EmuELEC
 
-Explorar UART e comunicação serial
+Explorar UART, pinos de debug e comunicação serial
 
 Implementar Wi-Fi e Bluetooth via ESP32
 
+Investigar possibilidade de armazenamento interno fixo
+
 Criar documentação técnica que não existe publicamente
 
-Testar limites térmicos e de hardware do console
+Testar limites térmicos, elétricos e de hardware do console
 
 🔧 Modificações Planejadas / Em Estudo
 
 ESP32 (Wi-Fi + Bluetooth via UART)
 
-Sistema de refrigeração ativa (ventoinha + dissipação)
+Sistema de refrigeração ativa (ventoinha + dissipadores)
 
-Estudo de armazenamento interno fixo vs SD removível
+Estudo de SD soldado / armazenamento interno fixo
 
 Custom Firmware / CFW
+
+Estudo de dual-storage (SD sistema + SD jogos)
 
 Possível troca de analógicos (drift)
 
 Modificações físicas na carcaça (custom shell)
 
-Estudo de portas USB / OTG (se disponível)
+Investigação de USB / OTG (se disponível no hardware)
+
+Análise de consumo energético e bateria
 
 ⚠️ Aviso Importante / Riscos
 
@@ -67,17 +75,17 @@ Este projeto envolve:
 
 Soldagem direta na placa
 
-Modificação de firmware
+Modificação de firmware e bootloader
 
-Alterações físicas e elétricas
+Alterações físicas, térmicas e elétricas
 
 Riscos incluem:
 
-Brick do console
+Brick irreversível do console
 
-Superaquecimento
+Superaquecimento de componentes
 
-Perda total do dispositivo
+Curto-circuito e perda total do dispositivo
 
 ❌ NÃO RECOMENDADO para iniciantes
 Faça por sua conta e risco.
@@ -92,6 +100,8 @@ Releases: Nenhum
 
 Documentação: Em construção
 
+Objetivo atual: mapear hardware e validar hipóteses
+
 🇺🇸 README – English
 M17 Deep Mod Project
 
@@ -101,9 +111,9 @@ This is not a commercial project. No releases are planned. The goal is learning,
 
 📌 About the M17 (Base Model)
 
-The M17 is a low-cost Chinese retro handheld console designed mainly for emulation.
+The M17 is a low-cost Chinese retro handheld console designed mainly for Linux-based emulation.
 
-Known characteristics:
+Known characteristics
 
 ARM Quad-core Cortex-A7 CPU (~1.2 GHz, Rockchip RK3126 / variants)
 
@@ -115,43 +125,51 @@ Basic analog sticks (prone to drift)
 
 Main storage via microSD card
 
-Minimal internal OEM memory for boot/fallback
+Factory SD cards show low reliability and short lifespan
+
+Minimal internal OEM memory for boot / fallback
 
 No native Wi-Fi or Bluetooth
 
-Passive or no active cooling
+Passive or no active cooling, causing high operating temperatures
 
 🎯 Project Goals
 
-Study the boot process of RK3126
+Study the RK3126 boot process
 
-Understand internal OEM memory vs SD storage
+Understand OEM internal memory vs SD storage
 
-Analyze and modify Linux/EmuELEC
+Analyze and modify Linux / EmuELEC
 
-Explore UART communication
+Explore UART and serial debug interfaces
 
 Add Wi-Fi and Bluetooth using ESP32
 
-Create original technical documentation for the M17
+Research internal fixed storage solutions
 
-Test thermal and hardware limits
+Create original technical documentation
+
+Test thermal, electrical and hardware limits
 
 🔧 Planned / Research Modifications
 
 ESP32 (Wi-Fi + Bluetooth via UART)
 
-Active cooling system (fan + heatsink)
+Active cooling system (fan + heatsinks)
 
 Internal fixed storage vs removable SD research
 
 Custom Firmware (CFW)
 
+Dual-storage architecture research
+
 Analog stick replacement (drift fix)
 
 Physical mods / custom shell
 
-USB / OTG capability research (if supported)
+USB / OTG capability research
+
+Power consumption and battery analysis
 
 ⚠️ Warning / Risks
 
@@ -161,13 +179,13 @@ This project involves:
 
 Direct soldering
 
-Firmware modification
+Firmware and bootloader modification
 
-Physical and electrical changes
+Physical, thermal and electrical changes
 
 Possible risks:
 
-Device brick
+Irreversible device brick
 
 Overheating
 
@@ -185,11 +203,3 @@ Repository: Private
 Releases: None
 
 Documentation: In progress
-
-Se quiser, no próximo passo eu posso:
-
-reduzir isso pra uma versão curta
-
-criar uma descrição de 350 caracteres
-
-ou adaptar pra README mais “clean” estilo projeto open-source
