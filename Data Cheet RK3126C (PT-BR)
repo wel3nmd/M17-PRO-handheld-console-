@@ -1,0 +1,64 @@
+🇧🇷 Documentação – UART / RK3126C
+Datasheet oficial (Rockchip RK3126C)
+
+Datasheet retirado diretamente da Rockchip:
+
+📄 RK3126C Datasheet V1.0
+https://rockchip.fr/RK3126C%20datasheet%20V1.0.pdf
+
+📌 Páginas importantes do datasheet
+
+Página 18 – Visualização do encapsulamento (LQFP176)
+
+Mostra onde as pinagens começam e terminam
+
+Páginas 20–21 – Mapa completo de pinagens do processador
+
+Páginas 22–27 – Função detalhada de cada pino
+
+⚠️ Observação importante
+As pinagens normalmente começam no canto inferior esquerdo do nome do processador e seguem no sentido horário.
+👉 CONFIRME NA PÁGINA 18, pois isso pode variar conforme orientação do chip na placa.
+
+📍 Pinos de extrema importância (UART / Alimentação)
+RX   TX
+118  119   GND  115 ou 126
+
+118 → UART1_RX
+
+119 → UART1_TX
+
+GND → Qualquer ponto de terra da placa
+
+115 ou 126 → VCCIO (3.3V)
+
+
+
+🔌 Ligação ESP32 ↔ RK3126C (UART)
+ESP32	RK3126C	Função
+VCC (3.3V)	VCCIO	Alimentação
+GND	GND	Terra
+TX	UART1_RX	Comunicação
+RX	UART1_TX	Recepção
+
+⚠️ IMPORTANTE
+
+Trabalhar somente em 3.3V
+
+NÃO aplicar 5V nos pinos do RK3126C
+
+Conferir continuidade com multímetro antes de energizar
+
+🧠 Observações Técnicas
+
+A UART permite acesso a logs de boot, debug e possível acesso ao sistema
+
+Útil para:
+
+Diagnóstico de boot
+
+Estudo de firmware
+
+Integração com ESP32 (Wi-Fi / Bluetooth)
+
+Soldagem incorreta pode brickar permanentemente o console
