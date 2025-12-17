@@ -1,0 +1,64 @@
+Documentation – UART / RK3126C
+Official Datasheet (Rockchip RK3126C)
+
+Datasheet obtained directly from Rockchip:
+
+📄 RK3126C Datasheet V1.0
+https://rockchip.fr/RK3126C%20datasheet%20V1.0.pdf
+
+📌 Important Datasheet Pages
+
+Page 18 – Package layout (LQFP176)
+
+Shows where pin numbering starts and ends
+
+Pages 20–21 – Complete processor pinout
+
+Pages 22–27 – Detailed pin function descriptions
+
+⚠️ Important note
+Pin numbering usually starts at the bottom-left corner of the processor marking and continues clockwise.
+👉 VERIFY ON PAGE 18, as orientation may vary depending on board layout.
+
+📍 Critical Pins (UART / Power)
+RX   TX
+118  119
+GND  115 or 126
+
+
+118 → UART1_RX
+
+119 → UART1_TX
+
+GND → Any ground point
+
+115 or 126 → VCCIO (3.3V)
+
+🔌 ESP32 ↔ RK3126C UART Wiring
+ESP32	RK3126C	Function
+VCC (3.3V)	VCCIO	Power
+GND	GND	Ground
+TX	UART1_RX	Data
+RX	UART1_TX	Receive
+
+⚠️ IMPORTANT
+
+Use 3.3V ONLY
+
+DO NOT apply 5V to RK3126C pins
+
+Always test continuity before powering on
+
+🧠 Technical Notes
+
+UART provides access to boot logs, debug output and possible system interaction
+
+Useful for:
+
+Boot diagnostics
+
+Firmware analysis
+
+ESP32 integration (Wi-Fi / Bluetooth)
+
+Incorrect soldering may permanently brick the device
