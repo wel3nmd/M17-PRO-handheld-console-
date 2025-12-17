@@ -1,4 +1,4 @@
-🇧🇷 Documentação – UART / RK3126C
+Documentação – UART / RK3126C
 Datasheet oficial (Rockchip RK3126C)
 
 Datasheet retirado diretamente da Rockchip:
@@ -22,7 +22,9 @@ As pinagens normalmente começam no canto inferior esquerdo do nome do processad
 
 📍 Pinos de extrema importância (UART / Alimentação)
 RX   TX
-118  119   GND  115 ou 126
+118  119
+GND  115 ou 126
+
 
 118 → UART1_RX
 
@@ -31,8 +33,6 @@ RX   TX
 GND → Qualquer ponto de terra da placa
 
 115 ou 126 → VCCIO (3.3V)
-
-
 
 🔌 Ligação ESP32 ↔ RK3126C (UART)
 ESP32	RK3126C	Função
