@@ -17,7 +17,7 @@ Páginas 20–21 – Mapa completo de pinagens do processador
 Páginas 22–27 – Função detalhada de cada pino
 
 ⚠️ Observação importante
-As pinagens normalmente começam no canto inferior esquerdo do nome do processador e seguem no sentido horário.
+As pinagens normalmente começam no canto inferior esquerdo do nome do processador e seguem no sentido anti-horário.
 👉 CONFIRME NA PÁGINA 18, pois isso pode variar conforme orientação do chip na placa.
 
 📍 Pinos de extrema importância (UART / Alimentação)
