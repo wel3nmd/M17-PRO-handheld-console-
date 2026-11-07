@@ -277,7 +277,7 @@ Device recovery
 
 My first experience recovering this device, do not follow this procedure
 
-Repository: Private
+Repository: Public
 
 Releases: None
 
