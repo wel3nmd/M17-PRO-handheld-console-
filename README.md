@@ -94,7 +94,7 @@ Faça por sua conta e risco.
 
 Fase: Pesquisa / Estudo
 
-Repositório: Privado
+Repositório: Publico (projeto em desenvolvemento por motivos de dinheiro)
 
 Releases: Nenhum
 
@@ -209,7 +209,6 @@ Ports: USB-C power/data, headphone jack 3.5mm, microSD slot
 Buttons: volume +/-, power, gamepad buttons
 Speaker: 1 speaker
 Custom firmware (RukaCFW Retroarch)
-Read more here
 
 Default system structure
 Factory system is installed within this partition scheme:
